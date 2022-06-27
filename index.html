@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cajero</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&family=Russo+One&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <main class="incorrect_user" id="incorrect_user">
+        <div class="alert alert-danger d-flex align-items-center  col-2 container text-center" role="alert">
+            <strong class=" text-center">Usuario incorrecto</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+          </main>
+
+          <main class="correct_user" id="correct_user">
+            <div class="alert alert-success d-flex align-items-center col-2 container text-center" role="alert">
+                <strong class=" text-center">Usuario correcto</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+              </main>
+
+    <div class="container col-2 ubication-per" style="margin-top: 100px;">
+        
+     <main class="inicio" id="inicio"><h1 style="font-family: 'Russo One', sans-serif;" class="mb-3 text-center">CAJERO ATM</h1>
+        <label for="usuario" class="form-label">Usuario</label>
+          <input type="text" class="form-control" name="usuario" id="usuario">
+          <label for="contrasenia" class="form-label mb-3 ">Password</label>
+          <input type="password" class="form-control mb-3" name="contrasenia" id="contrasenia">
+          <button onclick="ingresar()" class="btn btn-primary">Ingresar</button>
+    </main>
+    </div>
+
+
+        <h2 style="font-family: 'Russo One', sans-serif;" class="mb-3 text-center" id="presentacion">Bienvenid@a <span id="nombre-usuario"></span></h2>
+
+    
+    <div class="d-flex justify-content-center">
+    <div class="acciones" id="acciones">
+
+    <h1><span id="info" class="badge bg-secondary">Selecciona una opción</span></h1>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4 container ">
+        <div class="col">
+          <div class="card h-100 ">
+            <img src="https://uploadgerencie.com/imagenes/oferta-monetaria.png" class="card-img-top" alt="https://uploadgerencie.com/imagenes/oferta-monetaria.png">
+            <div class="card-body">
+              <h5 class="card-title">CONSULTAR SALDO</h5>
+              <p class="card-text"><strong><span id="nombre-usuario"></span></strong>Si seleccionas esta opcion podras saber cuanto tiene actualmente en tu cuenta </p>
+            </div>
+            <a  id="consultar" class="btn btn-primary">Consultar</a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="https://xtradingfx.com/images/xm/1636778454412/original/how-to-withdraw-money-from-xm.jpeg" class="card-img-top" alt="https://xtradingfx.com/images/xm/1636778454412/original/how-to-withdraw-money-from-xm.jpeg">
+            <div class="card-body">
+              <h5 class="card-title">RETIRAR DINERO</h5>
+              <p class="card-text"><strong><span id="nombre-usuario"></span></strong> Al seleccionar esta seccion tendras efectivo en tus manos descontandolo del total que tengas en tu cuenta.</p>
+              <input type="text" class="form-control mb-3" name="retirarmoneys" id="retirarmoneys" placeholder="Introduce la cantidad a retirar">
+            </div>
+            <button onclick="retirosexacto()" class="btn btn-primary">Retirar</button>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="https://static.vecteezy.com/system/resources/previews/004/941/525/original/financial-growth-concept-with-stacks-of-golden-coins-concept-of-monetary-collection-or-strategy-of-profit-or-benefit-making-in-business-to-win-cartoon-design-vector.jpg" class="card-img-top" alt="https://static.vecteezy.com/system/resources/previews/004/941/525/original/financial-growth-concept-with-stacks-of-golden-coins-concept-of-monetary-collection-or-strategy-of-profit-or-benefit-making-in-business-to-win-cartoon-design-vector.jpg">
+            <div class="card-body">
+              <h5 class="card-title">DEPOSITAR</h5>
+              <p class="card-text"><strong><span id="nombre-usuario"></span></strong> al depositar dinero , podras tenerlo seguro y podras hacer uso de el a traves de tu tarjeta fisica.</p>
+              <input type="text" class="form-control mb-3" name="agregarmoneys" id="agregarmoneys" placeholder="Introduce la cantidad a depositar">
+            </div>
+            <button onclick="ingresarSaldoHTML()" class="btn btn-primary">Depositar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+</div>
+
+
+
+
+    <script src="./app.js"></script>
+</body>
+</html>
