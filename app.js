@@ -4,7 +4,9 @@ let cuentas = [
     { nombre: "Luis", saldo: 290, password: 'l33t' },
     { nombre: "Carlos", saldo: 67, password: '123' }
   ];
+
    let posicionUsuario ;
+   let dinero;
   document.getElementById("acciones").style.display = "none";
   document.getElementById("incorrect_user").style.display = "none";
   document.getElementById("correct_user").style.display = "none";
